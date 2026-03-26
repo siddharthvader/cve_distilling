@@ -2,19 +2,17 @@
 
 Clean experiment artifacts for a narrow code-security distillation study.
 
-This repo packages the subset of code, data, benchmark outputs, and notes from a larger research workspace that turned out to be worth keeping after the benchmark was cleaned up.
+This repo packages the subset of code, data, benchmark outputs, and notes from a larger research workspace that held up after the benchmark was cleaned and rerun.
 
-## Main Result
+## Headline
 
-The original broad claim did **not** survive cleanup.
+The main result here is simple:
 
-What *did* survive was narrower and more believable:
+- a `7B` open model slightly beat `GPT-5.2` on a real-world security benchmark
+- the win came from **task narrowing**, **public matched data**, and **frontier-model distillation**
+- the best student was still small enough to be a practical specialist, not a general replacement for frontier models
 
-- a `7B` Qwen model can be made competitive with, and on one metric slightly better than, `GPT-5.2`
-- on a **narrow real-world security task**
-- using **public real-world data** plus **frontier-model distillation**
-
-The task was:
+The benchmark task was:
 
 - C/C++ numeric vulnerability triage
 - only `CWE-190` and `CWE-191`
@@ -24,7 +22,7 @@ The task was:
   - `location`
   - `reason`
 
-This is **not** a claim about general vulnerability detection or patch generation.
+This is not a claim about general vulnerability detection or patch generation. It is a claim about a specific, repeated workflow where specialization mattered.
 
 ## Headline Results
 
@@ -47,29 +45,37 @@ Because the benchmark is negative-heavy, the most useful metric is:
 
 Short version:
 
-- `Juliet alone` did not transfer
+- the best `7B` student slightly beat `GPT-5.2` on balanced accuracy
 - `PrimeVul + GPT-5.2-distilled targets` created the real lift
 - `Juliet` may provide a small warm-start benefit before the real-world distilled stage
 
-## What This Repo Shows
+## Why This Matters
 
-The work here supports a narrower conclusion than the original broad story:
+This repo supports a result that is stronger than "small models can be decent" and narrower than "small models beat frontier models at security":
 
-- **Synthetic-only security fine-tuning did not hold up**
-- **Narrow, structured, real-world distillation worked**
-- **A small model can compress frontier behavior on a repeated workflow**
+- a small open model can become competitive with, and slightly outperform, a frontier model on a narrow code-security workflow
+- public data was enough to get there
+- distillation plus task matching mattered more than raw dataset size
+- the useful end state is a cheaper specialist, not a better general reasoner
 
-That is closer to:
+The important pattern is:
 
-- "build a cheaper specialist for a narrow task"
+- broad synthetic fine-tuning was weak
+- narrow real-world distillation worked
+- specialization is the lever
 
-than:
+## What Actually Created The Lift
 
-- "beat frontier models at security in general"
+- `Juliet alone` did not transfer on the cleaned benchmark
+- `PrimeVul` real-world examples plus `GPT-5.2`-distilled structured targets did
+- `Juliet -> PrimeVul distilled` was the best run, but the improvement over `PrimeVul distilled` was small
+- the best student won mostly by increasing positive recall, not by becoming uniformly more accurate
+
+So the core lesson is not "synthetic security data is enough." The core lesson is that a small model can inherit useful frontier behavior when the task, labels, and evaluation are all tightly aligned.
 
 ## Important Caveats
 
-These matter.
+These caveats matter, but they do not erase the result.
 
 1. This is a **narrow task**, not general vulnerability detection.
 
@@ -91,20 +97,20 @@ These matter.
    - it catches more real positives
    - it also produces more false positives
 
-So the right interpretation is:
+The right interpretation is:
 
-- this is evidence that a small open model can become competitive on a narrow, structured workflow
-- it is **not** evidence that a small model has better general reasoning than a frontier model
+- this is real evidence that a small open model can win on a narrow, structured workflow
+- it is not evidence that a small model has better general reasoning than a frontier model
 
 ## Broad Benchmark Context
 
-Before narrowing the task, the broader benchmark was rebuilt to remove leakage and make comparisons fair.
+This repo started from a broader claim. That broader benchmark was rebuilt to remove leakage and make comparisons fair.
 
 On that cleaned broad BigVul detection benchmark:
 
 - `GPT-5.2 > Qwen base > old Qwen SFT`
 
-That was the key reason to abandon the broad claim and focus on a narrower experiment that held up better.
+That cleanup is important context because it makes the narrower win more credible. The broad story did not hold up, so the README focuses on the result that did.
 
 ## Repo Layout
 
