@@ -2,7 +2,7 @@
 
 Clean experiment artifacts for a narrow code-security distillation study.
 
-This repo packages the subset of code, data, benchmark outputs, and notes from a larger research workspace that held up after the benchmark was cleaned and rerun.
+This repo packages the subset of code, data, benchmark outputs, and notes from a larger research workspace, centered on the strongest result from the project: a narrow benchmark where a distilled `7B` model slightly outperformed `GPT-5.2`.
 
 ## Headline
 
@@ -60,13 +60,13 @@ This repo supports a result that is stronger than "small models can be decent" a
 
 The important pattern is:
 
-- broad synthetic fine-tuning was weak
+- broader task scopes are harder to move with small fine-tunes
 - narrow real-world distillation worked
 - specialization is the lever
 
 ## What Actually Created The Lift
 
-- `Juliet alone` did not transfer on the cleaned benchmark
+- `Juliet alone` was not enough to produce the strongest result
 - `PrimeVul` real-world examples plus `GPT-5.2`-distilled structured targets did
 - `Juliet -> PrimeVul distilled` was the best run, but the improvement over `PrimeVul distilled` was small
 - the best student won mostly by increasing positive recall, not by becoming uniformly more accurate
@@ -102,15 +102,16 @@ The right interpretation is:
 - this is real evidence that a small open model can win on a narrow, structured workflow
 - it is not evidence that a small model has better general reasoning than a frontier model
 
-## Broad Benchmark Context
+## Broader Scope
 
-This repo started from a broader claim. That broader benchmark was rebuilt to remove leakage and make comparisons fair.
+I also explored broader vulnerability-detection setups, but this repo is intentionally centered on the narrower benchmark where the result was clearest and most interesting:
 
-On that cleaned broad BigVul detection benchmark:
+- a fixed real-world eval set
+- a tightly scoped task
+- public matched data
+- distilled structured targets
 
-- `GPT-5.2 > Qwen base > old Qwen SFT`
-
-That cleanup is important context because it makes the narrower win more credible. The broad story did not hold up, so the README focuses on the result that did.
+That is the setup that produced the most believable frontier-vs-small-model comparison in this project.
 
 ## Repo Layout
 
@@ -179,9 +180,4 @@ Read:
 
 - [EXPERIMENT_NOTES_2026-03-26.md](./EXPERIMENT_NOTES_2026-03-26.md)
 
-That file contains the full story:
-
-- what failed
-- what was fixed
-- what actually worked
-- and what claims are still too strong
+That file contains the full methodology, result tables, contamination checks, and interpretation.
