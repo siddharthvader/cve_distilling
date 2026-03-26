@@ -1,0 +1,16 @@
+{
+  "category_counts": {
+    "clean_negative": 37,
+    "near_miss_negative": 18,
+    "positive": 19
+  },
+  "positive_subtypes": {
+    "CWE-190": 10,
+    "CWE-191": 9
+  },
+  "rows": 74,
+  "split_counts": {
+    "train": 64,
+    "valid": 10
+  }
+}

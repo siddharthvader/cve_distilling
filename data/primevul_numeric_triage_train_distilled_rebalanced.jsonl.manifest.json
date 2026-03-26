@@ -1,0 +1,19 @@
+{
+  "balance_positive_subtypes": true,
+  "distractor_fraction": 0.0,
+  "positive_to_hard_ratio": 1.0,
+  "rows": 876,
+  "source_input": "data/primevul_numeric_triage_train_distilled.jsonl",
+  "split_counts": {
+    "train": 764,
+    "valid": 112
+  },
+  "train_category_counts": {
+    "hard_negative": 382,
+    "positive": 382
+  },
+  "train_positive_subtypes": {
+    "CWE-190": 190,
+    "CWE-191": 192
+  }
+}

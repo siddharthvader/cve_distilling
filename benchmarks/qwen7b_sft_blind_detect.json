@@ -1,0 +1,1039 @@
+{
+  "metadata": {
+    "base_model": "qwen-coder-7b",
+    "adapter_path": "models/mlx-sft-7b/adapters",
+    "num_tasks": 44,
+    "seed": 42,
+    "timestamp": "2026-03-25T21:38:41.891440",
+    "elapsed_seconds": 595.182559967041,
+    "task_ids": [
+      "bigvul_linux_ce07d891_20_detect",
+      "bigvul_Chrome_02c83035_6_detect",
+      "bigvul_Android_3ac04433_22_detect",
+      "bigvul_Chrome_603af455_68_detect",
+      "bigvul_htcondor_5e5571d1_80_detect",
+      "bigvul_FFmpeg_189ff421_38_detect",
+      "bigvul_Chrome_05c619eb_64_detect",
+      "bigvul_Chrome_08cb718b_54_detect",
+      "bigvul_Chrome_2bceda49_8_detect",
+      "bigvul_Chrome_70340ce0_72_detect",
+      "bigvul_linux_a8b0ca17_48_detect",
+      "bigvul_linux_550fd08c_24_detect",
+      "bigvul_Chrome_3b0d7767_62_detect",
+      "bigvul_Android_7558d03e_44_detect",
+      "bigvul_libtiff_83a4b928_26_detect",
+      "bigvul_linux_415e3d3e_52_detect",
+      "bigvul_php_src_7245bff3_76_detect",
+      "bigvul_linux_45f6fad8_78_detect",
+      "bigvul_linux_a8b0ca17_58_detect",
+      "bigvul_poppler_7b2d314a_28_detect",
+      "bigvul_Chrome_20b65d00_50_detect",
+      "bigvul_linux_6b3a7077_42_detect",
+      "bigvul_htcondor_5e5571d1_46_detect",
+      "bigvul_Chrome_e9841fbd_60_detect",
+      "bigvul_systemd_ee735086_88_detect",
+      "bigvul_krb5_56f7b1bc_0_detect",
+      "bigvul_linux_f6d8bd05_40_detect",
+      "bigvul_Chrome_c0c89788_34_detect",
+      "bigvul_htcondor_8f9b304c_86_detect",
+      "bigvul_php_src_8763c609_74_detect",
+      "bigvul_postgres_31400a67_66_detect",
+      "bigvul_linux_57ebd808_84_detect",
+      "bigvul_tcpdump_2d669862_4_detect",
+      "bigvul_linux_fdc81f45_56_detect",
+      "bigvul_linux_78c9c4df_10_detect",
+      "bigvul_Chrome_3a2cf7d1_70_detect",
+      "bigvul_curl_75ca568f_12_detect",
+      "bigvul_linux_13bf9fbf_18_detect",
+      "bigvul_Chrome_e89cfcb9_30_detect",
+      "bigvul_jasper_d42b2388_32_detect",
+      "bigvul_libtiff_83a4b928_36_detect",
+      "bigvul_Chrome_673ce95d_2_detect",
+      "bigvul_openjpeg_8ee33522_14_detect",
+      "bigvul_tcpdump_e6511cc1_82_detect"
+    ],
+    "source_counts": {
+      "bigvul": 44
+    }
+  },
+  "metrics": {
+    "overall": {
+      "num_tasks": 44,
+      "avg_reward": 0.3397727272727275,
+      "avg_unit_pass_rate": 0.07954545454545454,
+      "avg_process_score": 1.0
+    },
+    "by_type": {
+      "detect": {
+        "num_tasks": 44,
+        "avg_reward": 0.3397727272727275,
+        "avg_unit_pass_rate": 0.07954545454545454,
+        "avg_process_score": 1.0
+      }
+    }
+  },
+  "results": [
+    {
+      "task_id": "bigvul_linux_ce07d891_20_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: Use of unsafe function\n\nLOCATION: The code uses functions or patterns that don't validate input size or content, potentially allowing memory corruption or injection attacks.\n\nROOT_CAUSE: The code lacks proper bounds checking or input validation, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [],
+        "matched_alias": null,
+        "expected_cwe": "CWE-284",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_Chrome_02c83035_6_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-415 (Double Free)\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-415"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-119",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_Android_3ac04433_22_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: Integer Overflow / Underflow\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [],
+        "matched_alias": null,
+        "expected_cwe": "CWE-119",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_Chrome_603af455_68_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-415 - Double Free\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-415"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-362",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_htcondor_5e5571d1_80_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-415: Double Free\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-415"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-134",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_FFmpeg_189ff421_38_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-415 - Double Free\n\nLOCATION: The unsafe function `free()` is used without proper bounds checking or memory validation.\n\nROOT_CAUSE: The code lacks proper input validation and bounds checking, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-415"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-200",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_Chrome_05c619eb_64_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-415 (Double Free)\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-415"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-416",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_Chrome_08cb718b_54_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-195 (Signed to Unsigned Conversion Error)\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-195"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-20",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_Chrome_2bceda49_8_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-415 (Double Free)\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-415"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-119",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_Chrome_70340ce0_72_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-415 (Double Free)\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-415"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-362",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_linux_a8b0ca17_48_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-190 (Integer Overflow)\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-190"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-399",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_linux_550fd08c_24_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-190 (Integer Overflow)\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-190"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-264",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_Chrome_3b0d7767_62_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: Use of unsafe memory functions\n\nLOCATION: The code uses functions or patterns that don't validate input size or content, potentially allowing memory corruption or injection attacks.\n\nROOT_CAUSE: The code lacks proper bounds checking or input validation, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [],
+        "matched_alias": null,
+        "expected_cwe": "CWE-399",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_Android_7558d03e_44_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-415 (Double Free)\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-415"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-200",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_libtiff_83a4b928_26_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-190 - Integer Overflow\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-190"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-787",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_linux_415e3d3e_52_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-190 - Integer Overflow\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-190"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-399",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_php_src_7245bff3_76_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-415: Double Free\n\nLOCATION: The unsafe function `spl_filesystem_file_read_csv` lacks proper bounds checking and input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-415"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-190",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_linux_45f6fad8_78_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-415 - Double Free\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-415"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-416",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_linux_a8b0ca17_58_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-190 - Integer Overflow\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-190"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-399",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_poppler_7b2d314a_28_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-121 (Stack Based Buffer Overflow)\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-121"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-189",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_Chrome_20b65d00_50_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-415 (Double Free)\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-415"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-362",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_linux_6b3a7077_42_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-190 - Integer Overflow\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-190"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-416",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_htcondor_5e5571d1_46_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-195 (Signed to Unsigned Conversion Error)\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-195"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-134",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_Chrome_e9841fbd_60_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-005 (Unsafe Function Call)\n\nLOCATION: The unsafe function call exists within the context of the code's logic or the functions it calls.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-005"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-264",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_systemd_ee735086_88_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-190 - Integer Overflow\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-190"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-264",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_krb5_56f7b1bc_0_detect",
+      "task_type": "detect",
+      "reward": 0.8,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-415 - Double Free\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": true,
+        "predicted_cwes": [
+          "CWE-415"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-415",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_linux_f6d8bd05_40_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-121 (Stack Based Buffer Overflow)\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-121"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-362",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_Chrome_c0c89788_34_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-415 (Double Free)\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-415"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-732",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_htcondor_8f9b304c_86_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-415 (Double Free)\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-415"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-20",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_php_src_8763c609_74_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-762\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-762"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-74",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_postgres_31400a67_66_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-121 (Stack Based Buffer Overflow)\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-121"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-189",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_linux_57ebd808_84_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-195 (Signed to Unsigned Conversion Error)\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-195"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-476",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_tcpdump_2d669862_4_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-195 (Signed to Unsigned Conversion Error)\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-195"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-125",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_linux_fdc81f45_56_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-195 (Signed to Unsigned Conversion Error)\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-195"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-189",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_linux_78c9c4df_10_detect",
+      "task_type": "detect",
+      "reward": 0.8,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-190 (Integer Overflow)\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": true,
+        "predicted_cwes": [
+          "CWE-190"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-190",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_Chrome_3a2cf7d1_70_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-415 - Double Free\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-415"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-399",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_curl_75ca568f_12_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-415 - Double Free\n\nLOCATION: The unsafe function `free()` is used without proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-415"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-89",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_linux_13bf9fbf_18_detect",
+      "task_type": "detect",
+      "reward": 0.55,
+      "unit_pass_rate": 0.5,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-121 (Stack Based Buffer Overflow)\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-121"
+        ],
+        "matched_alias": "buffer overflow",
+        "expected_cwe": "CWE-119",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_Chrome_e89cfcb9_30_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-415 (Double Free)\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-415"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-20",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_jasper_d42b2388_32_detect",
+      "task_type": "detect",
+      "reward": 0.8,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-190 - Integer Overflow\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": true,
+        "predicted_cwes": [
+          "CWE-190"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-190",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_libtiff_83a4b928_36_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-190 - Integer Overflow\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-190"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-787",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_Chrome_673ce95d_2_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-190 (Integer Overflow)\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-190"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-787",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_openjpeg_8ee33522_14_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-121 (Stack Based Buffer Overflow)\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-121"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-400",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    },
+    {
+      "task_id": "bigvul_tcpdump_e6511cc1_82_detect",
+      "task_type": "detect",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "VULNERABILITY: CWE-121 (Stack Based Buffer Overflow)\n\nLOCATION: The unsafe function call that lacks proper bounds checking or input validation.\n\nROOT_CAUSE: The code uses functions or patterns that don't validate input size or content, allowing potential memory corruption or injection attacks.\n\nIMPACT: An attacker could exploit this to:\n- Execute arbitrary code\n- Cause denial of service\n- Access or modify sensitive data\n- Bypass security controls\n\nFIX: Replace unsafe functions with secure alternatives:\n- Use bounds-checking functions (strncpy, snprintf)\n- Validate all input before use\n- Use safe memory allocation patterns<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!<|im_end|>!",
+      "grading_details": {
+        "cwe_match": false,
+        "predicted_cwes": [
+          "CWE-121"
+        ],
+        "matched_alias": null,
+        "expected_cwe": "CWE-125",
+        "process_checks": {
+          "root_cause": true,
+          "location": true,
+          "impact": true,
+          "fix": true
+        }
+      }
+    }
+  ]
+}

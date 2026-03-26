@@ -1,0 +1,2277 @@
+{
+  "metadata": {
+    "base_model": "qwen-coder-7b",
+    "resolved_model": "Qwen/Qwen2.5-Coder-7B-Instruct",
+    "adapter_path": null,
+    "num_tasks": 140,
+    "seed": 42,
+    "timestamp": "2026-03-26T15:01:49.756341",
+    "elapsed_seconds": 444.70825934410095,
+    "task_ids": [
+      "primevul_test_198476_distractor_negative",
+      "primevul_test_195801_distractor_negative",
+      "primevul_test_199833_distractor_negative",
+      "primevul_test_210091_distractor_negative",
+      "primevul_test_220023_hard_negative",
+      "primevul_test_441813_hard_negative",
+      "primevul_test_195398_distractor_negative",
+      "primevul_test_197111_distractor_negative",
+      "primevul_test_462234_hard_negative",
+      "primevul_test_386494_hard_negative",
+      "primevul_test_216515_distractor_negative",
+      "primevul_test_509470_hard_negative",
+      "primevul_test_424514_hard_negative",
+      "primevul_test_462407_hard_negative",
+      "primevul_test_441809_hard_negative",
+      "primevul_test_213589_distractor_negative",
+      "primevul_test_462252_hard_negative",
+      "primevul_test_386525_hard_negative",
+      "primevul_test_195405_positive",
+      "primevul_test_437405_hard_negative",
+      "primevul_test_208533_distractor_negative",
+      "primevul_test_204073_distractor_negative",
+      "primevul_test_201343_distractor_negative",
+      "primevul_test_210866_positive",
+      "primevul_test_195296_distractor_negative",
+      "primevul_test_195954_distractor_negative",
+      "primevul_test_212871_distractor_negative",
+      "primevul_test_208506_distractor_negative",
+      "primevul_test_223091_hard_negative",
+      "primevul_test_206625_distractor_negative",
+      "primevul_test_424528_hard_negative",
+      "primevul_test_211845_distractor_negative",
+      "primevul_test_462279_hard_negative",
+      "primevul_test_225548_hard_negative",
+      "primevul_test_214948_distractor_negative",
+      "primevul_test_215400_distractor_negative",
+      "primevul_test_212818_positive",
+      "primevul_test_195328_distractor_negative",
+      "primevul_test_212834_positive",
+      "primevul_test_441829_hard_negative",
+      "primevul_test_194989_positive",
+      "primevul_test_195220_distractor_negative",
+      "primevul_test_206771_positive",
+      "primevul_test_204711_distractor_negative",
+      "primevul_test_441805_hard_negative",
+      "primevul_test_462419_hard_negative",
+      "primevul_test_412125_hard_negative",
+      "primevul_test_202256_distractor_negative",
+      "primevul_test_214358_distractor_negative",
+      "primevul_test_215921_distractor_negative",
+      "primevul_test_223088_hard_negative",
+      "primevul_test_195237_positive",
+      "primevul_test_386531_hard_negative",
+      "primevul_test_210904_distractor_negative",
+      "primevul_test_197517_distractor_negative",
+      "primevul_test_386505_hard_negative",
+      "primevul_test_412148_hard_negative",
+      "primevul_test_386600_hard_negative",
+      "primevul_test_218772_hard_negative",
+      "primevul_test_214003_distractor_negative",
+      "primevul_test_207071_distractor_negative",
+      "primevul_test_201382_distractor_negative",
+      "primevul_test_424532_hard_negative",
+      "primevul_test_204036_distractor_negative",
+      "primevul_test_210223_distractor_negative",
+      "primevul_test_437406_hard_negative",
+      "primevul_test_412097_hard_negative",
+      "primevul_test_195023_positive",
+      "primevul_test_201353_distractor_negative",
+      "primevul_test_441822_hard_negative",
+      "primevul_test_204101_distractor_negative",
+      "primevul_test_208505_distractor_negative",
+      "primevul_test_223089_hard_negative",
+      "primevul_test_211832_distractor_negative",
+      "primevul_test_211155_distractor_negative",
+      "primevul_test_216905_positive",
+      "primevul_test_412138_hard_negative",
+      "primevul_test_198545_distractor_negative",
+      "primevul_test_223090_hard_negative",
+      "primevul_test_216903_distractor_negative",
+      "primevul_test_437403_hard_negative",
+      "primevul_test_462226_hard_negative",
+      "primevul_test_207700_distractor_negative",
+      "primevul_test_218740_hard_negative",
+      "primevul_test_195340_positive",
+      "primevul_test_195341_positive",
+      "primevul_test_462215_hard_negative",
+      "primevul_test_424511_hard_negative",
+      "primevul_test_212810_positive",
+      "primevul_test_200781_distractor_negative",
+      "primevul_test_441804_hard_negative",
+      "primevul_test_225559_hard_negative",
+      "primevul_test_462436_hard_negative",
+      "primevul_test_204351_distractor_negative",
+      "primevul_test_412140_hard_negative",
+      "primevul_test_424513_hard_negative",
+      "primevul_test_195242_positive",
+      "primevul_test_509471_hard_negative",
+      "primevul_test_198983_distractor_negative",
+      "primevul_test_209931_positive",
+      "primevul_test_209026_distractor_negative",
+      "primevul_test_218755_hard_negative",
+      "primevul_test_208522_positive",
+      "primevul_test_195085_distractor_negative",
+      "primevul_test_195402_positive",
+      "primevul_test_197565_distractor_negative",
+      "primevul_test_210555_positive",
+      "primevul_test_462228_hard_negative",
+      "primevul_test_412139_hard_negative",
+      "primevul_test_437407_hard_negative",
+      "primevul_test_198399_distractor_negative",
+      "primevul_test_386552_hard_negative",
+      "primevul_test_195403_positive",
+      "primevul_test_200157_distractor_negative",
+      "primevul_test_462402_hard_negative",
+      "primevul_test_210282_distractor_negative",
+      "primevul_test_198692_distractor_negative",
+      "primevul_test_212339_distractor_negative",
+      "primevul_test_462403_hard_negative",
+      "primevul_test_218750_hard_negative",
+      "primevul_test_223092_hard_negative",
+      "primevul_test_211136_distractor_negative",
+      "primevul_test_195264_distractor_negative",
+      "primevul_test_223094_hard_negative",
+      "primevul_test_211699_distractor_negative",
+      "primevul_test_218767_hard_negative",
+      "primevul_test_198350_distractor_negative",
+      "primevul_test_225543_hard_negative",
+      "primevul_test_437404_hard_negative",
+      "primevul_test_195037_positive",
+      "primevul_test_211179_distractor_negative",
+      "primevul_test_211471_distractor_negative",
+      "primevul_test_195391_positive",
+      "primevul_test_424523_hard_negative",
+      "primevul_test_437408_hard_negative",
+      "primevul_test_208411_distractor_negative",
+      "primevul_test_218770_hard_negative",
+      "primevul_test_225549_hard_negative",
+      "primevul_test_211110_distractor_negative",
+      "primevul_test_210050_distractor_negative"
+    ]
+  },
+  "metrics": {
+    "overall": {
+      "num_tasks": 140,
+      "avg_reward": 0.9099999999999997,
+      "avg_unit_pass_rate": 0.8714285714285714,
+      "avg_process_score": 1.0,
+      "binary_accuracy": 0.8785714285714286,
+      "exact_accuracy": 0.8642857142857143
+    },
+    "positives": {
+      "num_tasks": 20,
+      "avg_unit_pass_rate": 0.25
+    },
+    "negatives": {
+      "num_tasks": 120,
+      "avg_unit_pass_rate": 0.975
+    },
+    "subtypes": {
+      "NONE": 131,
+      "CWE-190": 9
+    }
+  },
+  "results": [
+    {
+      "task_id": "primevul_test_198476_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195801_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_199833_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_210091_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_220023_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code snippet does not contain any operations that could lead to integer overflow (CWE-190) or underflow (CWE-191). It is a constructor for a class and does not perform arithmetic operations.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_441813_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any operations that could lead to integer overflow (CWE-190) or underflow (CWE-191). The function appears to be swapping data types and sizes but does not perform arithmetic operations on integers.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195398_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_197111_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": true,\n  \"subtype\": \"CWE-190\",\n  \"location\": \"size_t total_data_len = size_t(data_width) * size_t(data_height) * size_t(num_channels);\",\n  \"reason\": \"The multiplication of data_width, data_height, and num_channels can result in an integer overflow if any of these values are large enough.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_462234_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not perform any integer operations that could lead to overflow or underflow.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_386494_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not perform any arithmetic operations that could lead to integer overflow or underflow.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_216515_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_509470_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any instances of CWE-190 Integer Overflow or Wraparound or CWE-191 Integer Underflow.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_424514_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_462407_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_441809_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_213589_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_462252_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_386525_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195405_positive",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_437405_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_208533_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_204073_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_201343_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer operations that could lead to overflow or underflow.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_210866_positive",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-191",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195296_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195954_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_212871_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_208506_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_223091_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_206625_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_424528_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_211845_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any instances of integer overflow or underflow.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_462279_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not perform any integer operations that could lead to overflow or underflow.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_225548_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not perform any integer operations that could lead to overflow or underflow.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_214948_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_215400_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_212818_positive",
+      "reward": 0.6499999999999999,
+      "unit_pass_rate": 0.5,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": true,\n  \"subtype\": \"CWE-190\",\n  \"location\": \"attr->err_code = buf[6] * 100 + buf[7];\",\n  \"reason\": \"The multiplication and addition operations can result in an integer overflow if the values of buf[6] and buf[7] are large enough.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-191",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195328_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_212834_positive",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_441829_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_194989_positive",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195220_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_206771_positive",
+      "reward": 0.6499999999999999,
+      "unit_pass_rate": 0.5,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": true,\n  \"subtype\": \"CWE-190\",\n  \"location\": \"if (maxVertices > 0)\",\n  \"reason\": \"The variable 'maxVertices' is used in the allocation of an array without proper bounds checking, which could lead to integer overflow.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-191",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_204711_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_441805_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_462419_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow (CWE-190) or underflow (CWE-191) vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_412125_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not perform any integer operations that could lead to overflow or underflow.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_202256_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_214358_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_215921_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_223088_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer operations that could lead to overflow or underflow.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195237_positive",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_386531_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_210904_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not perform any integer operations that could lead to overflow or underflow.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_197517_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_386505_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer operations that could lead to overflow or underflow.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_412148_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_386600_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any operations that could lead to integer overflow (CWE-190) or underflow (CWE-191). All values being used in the function are floating-point numbers and do not involve integer arithmetic.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_218772_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_214003_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": true,\n  \"subtype\": \"CWE-190\",\n  \"location\": \"if (hdr.nSubrects * (4 + (BPP / 8)) > RFB_BUFFER_SIZE)\",\n  \"reason\": \"The multiplication of hdr.nSubrects and (4 + (BPP / 8)) could result in an integer overflow if hdr.nSubrects is large enough.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_207071_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_201382_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_424532_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_204036_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_210223_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_437406_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_412097_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195023_positive",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": true,\n  \"subtype\": \"CWE-190\",\n  \"location\": \"MultiplyWithoutOverflow(new_num_elements, input_shape_vec(i))\",\n  \"reason\": \"The multiplication operation could result in integer overflow.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_201353_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_441822_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_204101_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not perform any integer operations that could lead to overflow or underflow.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_208505_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any instances of integer overflow or underflow.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_223089_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_211832_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any instances of integer overflow or underflow.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_211155_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not exhibit integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_216905_positive",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": true,\n  \"subtype\": \"CWE-190\",\n  \"location\": \"order_group_num *= 2;\",\n  \"reason\": \"The multiplication of an integer by 2 could result in an overflow if order_group_num is large enough.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_412138_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_198545_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_223090_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_216903_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_437403_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_462226_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not perform any integer operations that could lead to overflow or underflow.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_207700_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer operations that could lead to overflow or underflow.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_218740_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195340_positive",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"No integer overflow or underflow operations detected.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195341_positive",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_462215_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_424511_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_212810_positive",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_200781_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_441804_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_225559_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not perform any integer operations that could lead to overflow or underflow.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_462436_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_204351_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_412140_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not perform any integer operations that could lead to overflow or underflow.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_424513_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195242_positive",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"No integer overflow or underflow vulnerabilities found.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_509471_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any operations that could lead to integer overflow (CWE-190) or underflow (CWE-191). The function primarily deals with list manipulation and assertions.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_198983_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_209931_positive",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_209026_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not perform any integer operations that could lead to overflow or underflow.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_218755_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not perform any arithmetic operations that could lead to integer overflow or underflow.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_208522_positive",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195085_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195402_positive",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": true,\n  \"subtype\": \"CWE-190\",\n  \"location\": \"sizeof(dummy.data[0]) * size\",\n  \"reason\": \"The multiplication of 'size' by 'sizeof(dummy.data[0])' can result in an integer overflow if 'size' is large enough.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_197565_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_210555_positive",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_462228_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not perform any integer operations that could lead to overflow or underflow.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_412139_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_437407_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_198399_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_386552_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195403_positive",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain an integer overflow or underflow vulnerability.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_200157_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any instances of CWE-190 Integer Overflow or Wraparound or CWE-191 Integer Underflow.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_462402_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not perform any integer operations that could lead to overflow or underflow.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_210282_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not perform any arithmetic operations that could lead to integer overflow or underflow.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_198692_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_212339_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_462403_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_218750_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_223092_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_211136_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195264_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_223094_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not perform any integer operations that could lead to overflow or underflow.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_211699_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any instances of integer overflow or underflow.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_218767_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_198350_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_225543_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not perform any integer operations that could lead to overflow or underflow.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_437404_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195037_positive",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": true,\n  \"subtype\": \"CWE-190\",\n  \"location\": \"MultiplyWithoutOverflow(new_num_elements, input_shape_vec(i))\",\n  \"reason\": \"The function uses a custom multiplication function that does not check for integer overflow.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_211179_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": true,\n  \"subtype\": \"CWE-190\",\n  \"location\": \"uint32_t count = byteSwap4(dir,4,bSwap);\",\n  \"reason\": \"The variable 'count' could be used in calculations that lead to integer overflow if its value exceeds the maximum representable by a 32-bit unsigned integer.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_211471_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195391_positive",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not exhibit integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_424523_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_437408_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_208411_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_218770_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_225549_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The function does not perform any integer operations that could lead to overflow or underflow.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_211110_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_210050_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "```json\n{\n  \"vulnerable\": false,\n  \"subtype\": \"NONE\",\n  \"location\": \"NONE\",\n  \"reason\": \"The provided code does not contain any integer overflow or underflow vulnerabilities.\"\n}\n```",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    }
+  ]
+}

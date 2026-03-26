@@ -1,0 +1,2120 @@
+{
+  "metadata": {
+    "model": "gpt-5.2",
+    "num_tasks": 140,
+    "timestamp": "2026-03-26T08:05:57.480450",
+    "elapsed_seconds": 280.1457841396332
+  },
+  "metrics": {
+    "overall": {
+      "num_tasks": 140,
+      "avg_reward": 0.7199999999999993,
+      "avg_unit_pass_rate": 0.6,
+      "avg_process_score": 1.0,
+      "binary_accuracy": 0.6071428571428571,
+      "exact_accuracy": 0.5928571428571429
+    }
+  },
+  "results": [
+    {
+      "task_id": "primevul_test_198476_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function performs no arithmetic on integer types (no additions, subtractions, multiplications, or size calculations), so there is no opportunity for integer overflow or underflow in this code.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195801_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-191\",\"location\":\"stack->top-- in EL_FIELD branch (after wddx_stack_top/efree(ent))\",\"reason\":\"The EL_FIELD handler decrements stack->top unconditionally without checking for zero, so if stack->top is 0 this can underflow (wraparound) and corrupt stack state.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-191",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_199833_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"boundary check and pointer arithmetic: (offset_x + width > gif->width) / (offset_y + height > gif->height); and frame_scanline = frame_data + offset_x + (decode_y * gif->width)\",\"reason\":\"offset_x/offset_y/width/height are unsigned and derived from untrusted data, so offset_x+width or offset_y+height (and decode_y*gif->width) can overflow/wrap, potentially bypassing bounds checks and leading to out-of-bounds writes via frame_scanline.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_210091_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-191\",\"location\":\"if (input[len - 1] == '\\\\n') input[len - 1] = '\\\\0';\",\"reason\":\"If fgets reads an empty string (len==0), indexing input[len-1] underflows to input[-1], causing an out-of-bounds access due to integer underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-191",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_220023_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The snippet is only a constructor delegating to a base class and performs no arithmetic or integer conversions that could overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_441813_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function only performs byte-swapping on request fields and does not do any arithmetic that could overflow or underflow integers.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195398_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"All integer computations are bounded (labellen is the min of two sizeof values, capabilities uses bitwise OR on __u32 constants, and device_nr is only formatted), with no arithmetic that can overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_197111_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"data_width = exr_header->data_window[2] - exr_header->data_window[0] + 1; data_height = exr_header->data_window[3] - exr_header->data_window[1] + 1;\",\"reason\":\"The width/height are computed with signed int subtraction/addition that can overflow (e.g., extreme data_window values), and the subsequent negative/threshold checks occur after the potentially overflowing arithmetic.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_462234_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function only writes a fixed 8-byte attribute after checking len < 8, and uses constant sizes without arithmetic that could overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_386494_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function only retrieves floating-point values and constructs a point object without performing any integer arithmetic that could overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_216515_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"if (ticklen + 6 != n)\",\"reason\":\"ticklen is an int derived from the message and adding 6 can overflow/wrap, potentially bypassing the length check and leading to inconsistent bounds assumptions for subsequent allocation/copy.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_509470_hard_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-191\",\"location\":\"MY_LEX_USER_VARIABLE_DELIMITER: get_quoted_token(lip, 1, lip->yyLength() - double_quotes - 1, quote_char) and get_token(lip, 1, lip->yyLength() - 1)\",\"reason\":\"lip->yyLength() is unsigned (uint) and subtracting (double_quotes+1) or 1 can underflow when the token length is too small, producing a huge length passed to get_token/get_quoted_token.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-191",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_424514_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function performs fixed-size allocations with calloc(1, sizeof(VIDEO_LISTENER_CALLBACK)) and does not do any arithmetic on integers that could overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_462407_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function performs no arithmetic on integers that could overflow/underflow; it mainly allocates/initializes structures and formats strings with bounded snprintf.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_441809_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function only performs byte-swapping on request fields and delegates to another handler without doing arithmetic that could overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_213589_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The only integer operations are assignments and post-increment of cur_hseq and a strlen() result stored in qlen, with no arithmetic that could overflow/underflow in this function.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_462252_hard_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"*printed = (ca->length + ATTR_HDR_LEN + 3) & (~3);\",\"reason\":\"If ca->length is large, the unsigned addition can overflow/wrap, producing a too-small *printed so the len check may pass and pj_memcpy then copies ca->length bytes into an insufficient buffer.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_386525_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function performs only floating-point arithmetic and loop indexing with unsigned ints without any integer arithmetic that could overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195405_positive",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"width=(size_t) floor(bounds.x2-bounds.x1+0.5); height=(size_t) floor(bounds.y2-bounds.y1+0.5); and page.width/page.height scaling with resolution\",\"reason\":\"Untrusted floating-point bounds and resolution values are subtracted/multiplied then cast to size_t without range checks, so negative/huge results can wrap or overflow when converted/assigned, producing incorrect dimensions.\"}",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_437405_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"vq->size is validated to be a power of two and <= 32768 before being used in multiplications for allocation sizes, preventing integer overflow/underflow in this function.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_208533_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"size checks and growth calculations: `if (nbchars + XML_PARSER_BUFFER_SIZE > buffer_size)` and `if (nbchars + i + XML_PARSER_BUFFER_SIZE > buffer_size)` (also `growBuffer(buffer, i + XML_PARSER_BUFFER_SIZE)`), plus repeated `buffer[nbchars++] = ...`\",\"reason\":\"`nbchars` and `buffer_size` are `size_t` and are incremented/added without overflow guards, so `nbchars + ...` can wrap around and bypass the grow check, leading to writes past the allocated buffer.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_204073_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"realloc(result, sizeof *result * (i + 1)) and later realloc(result, sizeof *result * (i + 1)) with int i\",\"reason\":\"The int counter i can overflow when many tokens are processed, making (i + 1) wrap and causing the realloc size calculation to wrap/under-allocate, leading to out-of-bounds writes when storing result[i++] pointers.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_201343_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function only forwards arguments to avc_has_perm and performs no arithmetic or integer conversions that could overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_210866_positive",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-191\",\"location\":\"dataLeft = (stuff->length * 4) - SIZEOF(xkbSelectEventsReq);\",\"reason\":\"If stuff->length*4 is smaller than SIZEOF(xkbSelectEventsReq), the unsigned subtraction underflows, making dataLeft huge and allowing subsequent bounds checks to be bypassed.\"}",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-191",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-191",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195296_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"for (; stop != std::string::npos; start = stop + 1) and publish(iterator->wildcardChild, stop + 1, stop, ...)\",\"reason\":\"When topic.find returns std::string::npos, computing stop+1 wraps size_t to 0, causing incorrect indexing/recursion due to unsigned integer overflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195954_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"q->name.ptr = (char*) pj_pool_alloc(pool, name_len+4);\",\"reason\":\"If name_len is large, the signed int addition name_len+4 can overflow/wrap, causing an undersized allocation and subsequent write via get_name().\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_212871_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function does not perform any arithmetic on integer types (only string construction and length checks), so there is no integer overflow or underflow risk in the shown code.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_208506_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function does not perform arithmetic that can overflow/underflow (no risky additions/subtractions/multiplications on attacker-controlled integers); the only decrement is guarded by a prior `num_capath > 0` check, preventing underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_223091_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function performs no arithmetic on integers (only pointer assignments and flag bitwise XOR), so there is no integer overflow or underflow risk in this code.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_206625_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"int nspace_max_count = element->attribute_count+1; ... nspace_max_count += raptor_sequence_size(element->declared_nspaces); ... RAPTOR_CALLOC(..., nspace_max_count, sizeof(struct nsd));\",\"reason\":\"nspace_max_count is a signed int computed from potentially large counts (attribute_count/sequence_size) and can overflow to a small/negative value, leading to an undersized allocation and subsequent out-of-bounds writes when incrementing nspace_declarations_count.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_424528_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The only arithmetic on untrusted sizes is (cbSize - 4), but it is guarded by cbSize < 8, preventing underflow/overflow, and no other integer operations in the function can wrap.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_211845_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"ReadStripMethod: extent=4*(samples_per_pixel+1)*TIFFStripSize(tiff); and ReadTileMethod: extent=4*(samples_per_pixel+1)*MagickMax(rows*TIFFTileRowSize(tiff),TIFFTileSize(tiff));\",\"reason\":\"The size_t extent calculations multiply attacker-controlled TIFF fields (e.g., samples_per_pixel, strip/tile sizes) without overflow checks, so integer wraparound can under-allocate the buffer and lead to subsequent out-of-bounds writes during reads/imports.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_462279_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function only forwards parameters to helper functions and performs a status check, with no arithmetic operations that could overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_225548_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function only compares and assigns size_t values and passes num_bytes directly to malloc/realloc without performing arithmetic that could overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_214948_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function does not perform any arithmetic on integers (including len) that could overflow or underflow; it only compares strings, iterates pointers, and passes constant sizes.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_215400_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"*max = offset + (curr - pptr) * 32 + i - start;\",\"reason\":\"The unsigned u32 computation can underflow in the \\\"... + i - start\\\" part (since start is derived from offset and can exceed the partial sum), wrapping to a large value and causing incorrect block counts and subsequent arithmetic (e.g., free_blocks -= *max) to use the wrapped result.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_212818_positive",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-191\",\"location\":\"value.slen = attr->hdr.length - 4;\",\"reason\":\"If attr->hdr.length is less than 4, subtracting 4 underflows (especially if length is unsigned), producing a very large slen that can drive out-of-bounds reads/copies in pj_strdup.\"}",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-191",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-191",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195328_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"All loop indices and lengths are unsigned and only incremented, with no arithmetic that can wrap/underflow in a way that affects allocation or bounds; the main risks here are out-of-bounds reads/writes and buffer overflows, not CWE-190/191.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_212834_positive",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"pThis->iOctetsRemain = pThis->iOctetsRemain * 10 + c - '0';\",\"reason\":\"The octet-count parser multiplies and adds into (apparently) a signed int without bounds checking, so a long digit sequence can overflow/wrap iOctetsRemain and corrupt subsequent length calculations.\"}",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_441829_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function only byte-swaps fixed-size request fields and performs a size check before delegating, with no arithmetic that could overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_194989_positive",
+      "reward": 0.6499999999999999,
+      "unit_pass_rate": 0.5,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-191\",\"location\":\"number_bits=(ssize_t) image->columns-x;\",\"reason\":\"If x becomes greater than image->columns due to the inner loop incrementing x, the subtraction image->columns-x can underflow when converted to ssize_t, yielding a negative/large value that breaks the bit loop bounds.\"}",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-191",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195220_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function does not perform arithmetic on integers in a way that could overflow/underflow; it only parses option values with atoi and increments log_level without any size-dependent calculations shown.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_206771_positive",
+      "reward": 0.6499999999999999,
+      "unit_pass_rate": 0.5,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"vertices = new double[4*maxVertices]; and vertices[4*vertexIndex + ...] indexing\",\"reason\":\"If maxVertices is large, 4*maxVertices can overflow (wrap) causing an undersized allocation and subsequent out-of-bounds writes via 4*vertexIndex indexing.\"}",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-191",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_204711_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-191\",\"location\":\"val.length = val.length - (p - (uint8_t *)(val.data)) - cnk.length;\",\"reason\":\"Although comments assume cnk.length <= val.length, the code does not explicitly enforce that (p - val.data) + cnk.length <= val.length before subtracting, so if that invariant is violated val.length can underflow (wrap) to a very large unsigned value.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-191",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_441805_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function only performs byte-swapping on request fields and delegates to another handler without any arithmetic that could overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_462419_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function performs socket/session cleanup and linked-list pointer updates without any arithmetic operations that could overflow or underflow integers.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_412125_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function performs only fixed-size pointer arithmetic and uses constant lengths in memcpy/hashlittle without any integer arithmetic that could overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_202256_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"const qreal *lastPoint = points + (pointCount<<1);\",\"reason\":\"pointCount is an int from path.elementCount() and left-shifting by 1 can overflow/wrap for large values, leading to an incorrect lastPoint pointer and potentially out-of-bounds iteration.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_214358_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"frame_end = window_posn + (out_bytes - (qtm->o_end - qtm->o_ptr));\",\"reason\":\"The expression mixes signed off_t with unsigned window_posn, so a large out_bytes can be converted/truncated and added to window_posn causing unsigned wraparound and an incorrect (smaller) frame_end.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_215921_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"int len = kwset->mind; ... if (len > size) ... sp = kwset->target + len; tp = text + len; if (size > 12 * len)\",\"reason\":\"kwset->mind is stored in a signed int and then used in pointer/size arithmetic and in the expression 12*len, so a large or negative value can overflow/wrap or sign-convert, bypassing bounds checks and leading to incorrect pointer calculations.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_223088_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function only calls UnregisterMagickInfo with a constant string and performs no integer arithmetic or conversions that could overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195237_positive",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"width=(size_t) floor(bounds.x2-bounds.x1+0.5); height=(size_t) floor(bounds.y2-bounds.y1+0.5); and later page.width=(size_t) floor(page.width*image->resolution.x/delta.x+0.5); page.height=(size_t) floor(page.height*image->resolution.y/delta.y+0.5);\",\"reason\":\"Untrusted floating-point values from the PCL CropBox/MediaBox and resolution scaling are converted to size_t without range checks, so negative/huge results can wrap/truncate when cast, producing incorrect dimensions (integer overflow/wraparound).\"}",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_386531_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function only compares and forwards existing numeric fields to writer methods without performing arithmetic that could overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_210904_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-191\",\"location\":\"len -= cut; (with cut = WARN_TEXTWIDTH-1 and possible cut==0)\",\"reason\":\"If no whitespace is found, cut can decrement to 0, and then len is reduced by 0 while ptr advances by 1, causing the loop to repeat without decreasing len and potentially leading to incorrect length handling consistent with an underflow/logic error in the decrement step.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-191",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_197517_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"data_signed_offset accumulation and subsequent memcpy/data_signed[data_signed_offset] writes (building data_signed)\",\"reason\":\"Unbounded additions of attacker-controlled size_t lengths (rpid_hash_len, credential_id_len, cert_x_len, cert_y_len, etc.) can overflow/wrap data_signed_offset and/or exceed the fixed 200-byte data_signed buffer, leading to incorrect offsets and out-of-bounds writes.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_386505_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function only compares groupCode to a constant and forwards groupValue without performing any arithmetic or size calculations that could overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_412148_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function uses fixed-size constants for allocations and memcpy lengths without any arithmetic that could overflow or underflow, so CWE-190/191 conditions are not present.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_386600_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function only retrieves floating-point values and passes them to a constructor and method call, with no integer arithmetic or conversions that could overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_218772_hard_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"width<<=1; and windows->widget.width=(unsigned int) (width+9*QuantumMargin); windows->widget.min_width=(unsigned int) (9*QuantumMargin+...); windows->widget.height=(unsigned int) (12*height);\",\"reason\":\"Multiple unsigned arithmetic operations (left shift and additions/multiplications) on width/height can overflow/wrap without bounds checks, leading to incorrect widget dimensions.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_214003_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"if (hdr.nSubrects * (4 + (BPP / 8)) > RFB_BUFFER_SIZE || !ReadFromRFBServer(..., hdr.nSubrects * (4 + (BPP / 8))))\",\"reason\":\"The multiplication of attacker-controlled hdr.nSubrects by (4 + (BPP/8)) can overflow/wrap, causing an incorrect (smaller) length to be validated and read, leading to out-of-bounds parsing in the subsequent loop.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_207071_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"_data->maxSampleCountTableSize = _data->tileDesc.ySize * _data->tileDesc.xSize * sizeof(int);\",\"reason\":\"The multiplication of tile dimensions and sizeof(int) can overflow the integer type of maxSampleCountTableSize, leading to wraparound and an incorrect (too small) allocation size.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_201382_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-191\",\"location\":\"fd->ptr -= 4;\",\"reason\":\"The code decrements fd->ptr by 4 without checking that it is at least 4, so if fd->ptr is an unsigned type (common for buffer indices) it can underflow and wrap to a large value.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-191",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_424532_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function performs pointer cleanup and queue draining without any arithmetic on integers that could overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_204036_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"(fw.len + sizeof(u32) - sizeof(u8)) / sizeof(u32)\",\"reason\":\"If fw.len is a small unsigned type (e.g., u16), the addition can overflow/wrap before division, producing an incorrect dword count.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_210223_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function only performs resource lookups, boolean/format comparisons, and forwards parameters without any arithmetic that could overflow or underflow integers.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_437406_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function does not perform arithmetic that could overflow/underflow; it only masks a u64 to obtain an index and assigns/compares file descriptors without integer increment/decrement or size calculations.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_412097_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function does not perform arithmetic that could overflow/underflow; it mainly assigns sizes/pointers and passes them to helpers without increment/decrement or size computations.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195023_positive",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"int new_num_elements = 1; ... new_num_elements = MultiplyWithoutOverflow(new_num_elements, input_shape_vec(i)); if (new_num_elements < 0) ...\",\"reason\":\"The product of int64_t shape dimensions is accumulated into a 32-bit int, so large shapes can overflow/wrap before the negative check detects it, leading to incorrect size calculations.\"}",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_201353_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function performs no arithmetic on variable-sized integers (only assigns constants like 2048, 252, and MAX_DEBUGFS_ENTRIES-1 under debugfs) and does not use these in a way that could overflow/underflow within this function.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_441822_hard_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-191\",\"location\":\"dataLeft = (client->req_len * 4) - SIZEOF(xkbSelectEventsReq);\",\"reason\":\"If (client->req_len * 4) is smaller than SIZEOF(xkbSelectEventsReq), the unsigned subtraction underflows, making dataLeft huge and potentially bypassing length checks and advancing from.c8 out of bounds.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-191",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_204101_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function only uses a fixed offset (6) and increments it by a constant (2) without any arithmetic on untrusted values that could overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_208505_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"if (ns->valid_after + MIN_VOTE_INTERVAL > ns->fresh_until) and if (ns->valid_after + MIN_VOTE_INTERVAL*2 > ns->valid_until)\",\"reason\":\"The additions/multiplication on time values (ns->valid_after plus MIN_VOTE_INTERVAL and MIN_VOTE_INTERVAL*2) can overflow/wrap if time_t is near its maximum, potentially bypassing the intended interval checks.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_223089_hard_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"width=(size_t)CastDoubleToLong(floor(bounds.x2-bounds.x1+0.5)); height=(size_t)CastDoubleToLong(floor(bounds.y2-bounds.y1+0.5)); and later page.width=(size_t) floor(page.width*image->resolution.x/delta.x+0.5); page.height=(size_t) floor(page.height*image->resolution.y/delta.y+0.5);\",\"reason\":\"Untrusted PCL box coordinates and resolution values are used in floating-point arithmetic and then cast to size_t without bounds checks, so negative/huge intermediate results can wrap when converted to unsigned size_t, yielding incorrect dimensions (integer wraparound).\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_211832_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-191\",\"location\":\"NEWNAME: `j = 1 + (unsigned int)(unsigned char)*d; dlen -= j; d += j;`\",\"reason\":\"`dlen` is unsigned and is decremented by `j` without checking `dlen >= j`, so a malformed domain label length can cause unsigned underflow/wraparound and subsequent logic to operate on an incorrect (very large) length.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-191",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_211155_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-191\",\"location\":\"EMU_KSH: for (lport = 0, i = 0; i < m->m_len - 1; ++i)\",\"reason\":\"If m->m_len is 0, the expression m->m_len - 1 underflows (likely as an unsigned length type), making the loop bound huge and causing out-of-bounds reads while accumulating lport.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-191",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_216905_positive",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"order_group_num*= 2; and n_elems = (...) * 5; then arena->alloc(sizeof(Item*) * n_elems)\",\"reason\":\"Multiple unsigned multiplications/additions can overflow/wrap (e.g., order_group_num*=2, sum *5, and sizeof(Item*)*n_elems), causing an undersized allocation and potential out-of-bounds use of the ref pointer array.\"}",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_412138_hard_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"dnsccert *current_cert = &env->certs[cert_id++]; (cert_id not bounded by env->signed_certs_count)\",\"reason\":\"cert_id is incremented for each matching certificate without checking it stays < env->signed_certs_count, so it can wrap around (size_t overflow) and index env->certs out of bounds if more matches occur than allocated.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_198545_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"addr++ inside the inner for-loop (for (j=0; j<linebytes; j++) { ... addr++; })\",\"reason\":\"addr is an unsigned int and is incremented length times without bounds checking, so it can wrap around on overflow when near UINT_MAX.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_223090_hard_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-191\",\"location\":\"*packbits=(unsigned char) (count-1); (in Literal run)\",\"reason\":\"When the literal-run loop exits with count==0 (possible for x>=4 when the first three pixels are equal), the expression (count-1) underflows and is converted to unsigned char, producing an unintended large value.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-191",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_216903_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function contains no arithmetic on integer types (no additions/subtractions/multiplications or size calculations) that could overflow or underflow; it mainly performs pointer iteration, flag checks, and bitmask operations.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_437403_hard_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"reg->host_user_addr = (uint64_t)(uintptr_t)mmap_addr + mmap_offset;\",\"reason\":\"The code adds mmap_offset to the mapped base address without checking for 64-bit unsigned overflow, so a large mmap_offset can wrap reg->host_user_addr.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_462226_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function performs a fixed-size allocation and memcpy using sizeof(pj_stun_unknown_attr) with no arithmetic that could overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_207700_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function performs a map lookup and returns a value without any integer arithmetic or conversions that could overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_218740_hard_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"q=p+length;\",\"reason\":\"Pointer arithmetic uses the untrusted size_t length without overflow checks, so a very large length can wrap/overflow the computed address (q) leading to incorrect bounds in the subsequent loop.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195340_positive",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"All index arithmetic is bounded by explicit shape/rank checks and FastBoundsCheck before use, and no integer additions/subtractions/multiplications on untrusted values are used to compute sizes or indices in a way that could overflow/underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195341_positive",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"output_size *= dim.size(); and total_output_size += output_size;\",\"reason\":\"Multiplying and accumulating potentially large dimension sizes into int64_t without overflow checks can wrap around, producing incorrect (possibly negative) sizes.\"}",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_462215_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function only uses fixed small constants for offsets and addr_len (4 or 16) and validates attr->hdr.length against expected sizes, so there is no integer overflow or underflow in the arithmetic shown.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_424511_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function performs no arithmetic on integers (only assignments, allocations with constant sizes, and returns), so there is no opportunity for integer overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_212810_positive",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"a = ALIGN_UP(size, ALIGNMENT); and malloc(ALIGNMENT + size); r->total_large += ALIGNMENT+size;\",\"reason\":\"If size is near SIZE_MAX, ALIGN_UP(size, ...) or the addition ALIGNMENT+size can overflow size_t, leading to undersized allocation and incorrect accounting.\"}",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_200781_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"while (isdigit(UChar(*sp))) { c = UChar(8 * c + (*sp++ - '0')); len++; }\",\"reason\":\"The octal-parsing loop multiplies and adds into an unsigned char without bounds checking, so values beyond 255 wrap around (integer overflow) and produce an incorrect result.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_441804_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function only swaps 16-bit request fields and performs a size check before delegating, with no arithmetic that could overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_225559_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function only calls free() on the pointer and performs no integer arithmetic or size calculations that could overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_462436_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function performs no arithmetic on integers and contains no operations that could overflow or underflow (it only switches on a type, calls handlers, and conditionally invokes epoll_ctl).\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_204351_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"_constructoridx = (SQInteger)_methods.size(); and _members->NewSlot(... _make_method_idx(_methods.size())) / _make_field_idx(_defaultvalues.size())\",\"reason\":\"Casting container sizes to SQInteger and encoding them into indices can overflow/wrap if the vectors grow beyond SQInteger\u2019s range, producing incorrect negative or truncated indices.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_412140_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function only performs a null check and compares a count field to zero without any arithmetic that could overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_424513_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function performs no arithmetic on integers and uses calloc with constant arguments, so there is no integer overflow or underflow risk in this code.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195242_positive",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"All indexing and shape-derived values are stored in 64-bit types and are bounds-checked (FastBoundsCheck) before use, with no arithmetic that could overflow/underflow in this function.\"}",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_509471_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function only checks list emptiness, logs an element count, and calls helper routines without performing any arithmetic that could overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_198983_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function only performs size comparisons and endian conversions on fixed-width unsigned fields without any arithmetic that could overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_209931_positive",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"ret->surfaceData = BufferPool_Take(priv->surfacePool, width * height * 4);\",\"reason\":\"The size calculation multiplies untrusted 32-bit dimensions (width*height*4) without overflow checks, so it can wrap around and allocate an undersized buffer.\"}",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_209026_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The loop and assignments use size_t counters without arithmetic that could overflow/underflow, and the only decrement-like operation is resetting *nmdev_types to 0, so no CWE-190/191 condition is present in this function.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_218755_hard_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"count+=SetPSDSize(psd_info,image,0); and return((size_t) count);\",\"reason\":\"The signed ssize_t accumulator can overflow when adding the SetPSDSize result and may also become negative, then casting to size_t wraps to a large value.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_208522_positive",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"rrlen = strlen(dnscenv->provider_name) + strlen(ttl_class_type) + 4 * sizeof(struct SignedCert) + 1 + 1; and subsequent malloc(rrlen)/snprintf(rr, rrlen - 1, ...)\",\"reason\":\"The size calculation mixes size_t and a uint16_t rrlen, so the computed length can overflow/truncate into a too-small allocation, leading to wraparound in rrlen-1 and out-of-bounds writes during snprintf appends.\"}",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195085_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function\u2019s integer operations (loop indices, comparisons, and last_allowed_family + 1) are on bounded small values from fixed allowlists and do not involve untrusted arithmetic that could overflow or underflow in a way that affects control flow or memory safety.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195402_positive",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"computed_size = sizeof(dummy) + sizeof(dummy.data[0]) * size;\",\"reason\":\"The multiplication and addition are performed in signed int and can overflow/wrap for large positive or negative size values, producing an incorrect byte count.\"}",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_197565_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function does not perform arithmetic that could overflow/underflow (no additions, subtractions, multiplications, or size computations on integers), and it only assigns/compares values like packet lengths and IDs.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_210555_positive",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function only frees resources and resets fields without performing any arithmetic or size calculations that could overflow or underflow integers.\"}",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_462228_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function performs no arithmetic on integers and only forwards err_code to another API, so there is no evident integer overflow or underflow in this code snippet.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_412139_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function performs no arithmetic on integer values (e.g., net, addrlen, create) that could overflow or underflow, and uses them only as parameters to other functions.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_437407_hard_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"len calculations: sizeof(struct vring_desc) * vq->size; sizeof(struct vring_packed_desc) * vq->size; sizeof(struct vring_avail) + sizeof(uint16_t) * vq->size; sizeof(struct vring_used_elem) * vq->size\",\"reason\":\"The code multiplies and adds potentially large vq->size values into len/expected_len without explicit overflow checks, so if vq->size is attacker-controlled or insufficiently bounded these computations can wrap and lead to incorrect (smaller) mapped lengths.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_198399_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"ctrl->data_port = e * 256 + f;\",\"reason\":\"The PORT components e and f are parsed as signed ints without range checks, so e*256+f can overflow or wrap (and/or become negative) if large or negative values are provided.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_386552_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function only forwards existing numeric fields to writer methods without performing any arithmetic, casting, or size calculations that could overflow or underflow integers.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195403_positive",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"int alloc_size = TfLiteIntArrayGetSizeInBytes(size);\",\"reason\":\"If size is large, TfLiteIntArrayGetSizeInBytes(size) can overflow/wrap an int and yield a small positive alloc_size, causing malloc to allocate too little memory for the intended array.\"}",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_200157_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function does not perform arithmetic that can overflow/underflow in a way that affects control flow or memory sizing; the only notable arithmetic is a constant expression (24*60*60) and comparisons/assignments that do not risk wraparound.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_462402_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function performs no arithmetic on integers (only passes values to epoll_ctl and logs them), so there is no opportunity for integer overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_210282_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"s->reg++\",\"reason\":\"Incrementing s->reg without bounds checking can overflow/wrap around (e.g., if it is an unsigned or limited-width integer), leading to incorrect indexing behavior.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_198692_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The counters nx_cur and nx_new only increment from 0 and are bounded by the loop over num_migrate (which is checked by xfrm_migrate_check), with no arithmetic that can overflow or underflow in this function.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_212339_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"size_t bytes = size * nmemb;\",\"reason\":\"The multiplication of two size_t values can overflow/wrap around without checks, causing an incorrect (smaller) byte count to be returned.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_462403_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function uses fixed-size buffer lengths and the recv() return value without performing arithmetic that could overflow or underflow, so no CWE-190/191 issue is evident.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_218750_hard_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"row_size=image->columns*packet_size; count=image->rows*row_size; stream.avail_out=(uInt) count;\",\"reason\":\"Multiplication of image dimensions and packet_size can overflow size_t, leading to undersized allocation and truncation when cast to uInt for zlib output size, causing wraparound/incorrect buffer sizing.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_223092_hard_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"length=(image->columns*bits_per_pixel+7)/8; and subsequent allocations AcquireQuantumMemory(length+1,...), AcquireQuantumMemory(length+256,...), AcquireQuantumMemory(3*length+256,...)\",\"reason\":\"The computation of length and derived sizes multiplies and adds using size_t without overflow checks, so large image->columns can wrap length (and 3*length+256), leading to undersized allocations and potential out-of-bounds writes when filling/compressing pixel buffers.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_211136_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"total_slide_infos += n_slide_infos[i]; and RZ_NEWS0(..., total_slide_infos)\",\"reason\":\"total_slide_infos is a 32-bit accumulator of untrusted per-header counts and can overflow/wrap, leading to allocating too small an array and subsequent out-of-bounds writes when filling infos[k].\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195264_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-191\",\"location\":\"OP2(SLJIT_SUB, TMP2, 0, TMP1, 0, SLJIT_IMM, min); ... CMP(..., SLJIT_IMM, max - min)\",\"reason\":\"The code computes max - min using unsigned sljit_uw values, so if min > max (possible due to initial max=256 and later updates), the subtraction underflows and wraps to a large value, breaking the intended bounds check.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-191",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_223094_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function only compares the unsigned size_t length against constants and uses fixed-size memcmp calls guarded by a length check, with no arithmetic that could overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_211699_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"All size_t arithmetic used for allocations (e.g., (gl_offs+1)*sizeof(char*), (newcount+2)*sizeof(char*), home_len+dirlen) is either guarded by explicit SIZE_MAX/sizeof checks or derived from strlen/pointer differences that cannot underflow in the shown control flow, so no integer overflow/underflow is evident.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_218767_hard_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"resource_info->undo_cache<<=1; if (resource_info->undo_cache > 256) resource_info->undo_cache=1;\",\"reason\":\"Left-shifting undo_cache can overflow/wrap if the underlying type is unsigned and already large, and the subsequent comparison to 256 may not detect the wraparound.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_198350_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function does not perform arithmetic on integer values in a way that could overflow or underflow; it mainly formats an unsigned short port with %hu and passes it to networking APIs without risky integer computations.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_225543_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function only compares sizes and iterates with a signed int index without performing arithmetic that could overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_437404_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function does not perform arithmetic that can overflow/underflow; it mainly uses bitwise feature checks and a bounded decrement in the loop condition (dev->nr_vring > 2) that prevents underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195037_positive",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"int new_num_elements = 1; ... new_num_elements = MultiplyWithoutOverflow(new_num_elements, input_shape_vec(i)); if (new_num_elements < 0) ...\",\"reason\":\"The product of int64_t shape dimensions is accumulated into a 32-bit int, so large shapes can overflow/wrap (potentially to a positive value) without being reliably detected by the negative check.\"}",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_211179_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"DataBuf buf(size*count + pad+20); and subsequent uses of count*size (bOffsetIsPointer, io.read(buf.pData_,count*size))\",\"reason\":\"The 32-bit values size and count are multiplied and added without overflow checks, so size*count (and count*size) can wrap to a smaller value leading to under-allocation and out-of-bounds reads/writes when reading count*size bytes.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_211471_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"end = pnt + length; and checks like if (pnt + hdr->length + 3 > end) / pnt += hdr->length + 3\",\"reason\":\"Pointer/length arithmetic can overflow/wrap (e.g., pnt+length or pnt+hdr->length+3), making bounds checks unreliable and potentially allowing out-of-bounds reads despite the comparisons.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_195391_positive",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"int num_batch_items = splits_vec.size() - 1; and later loops using i <= num_batch_items with ngrams_splits_data[i]\",\"reason\":\"If splits_vec.size() is 0, subtracting 1 underflows in size_t then is converted to int (implementation-defined/overflow), and the subsequent loop condition i <= num_batch_items can cause out-of-bounds writes to ngrams_splits_data.\"}",
+      "grading_details": {
+        "gold_vulnerable": true,
+        "gold_subtype": "CWE-190",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_424523_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function only performs pointer dereferences and resource cleanup without any integer arithmetic that could overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_437408_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function assigns and logs size/offset values and passes them to mmap without performing arithmetic that could overflow or underflow, so CWE-190/191 conditions are not present in this code.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_208411_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"return retval == 0 ? (len + new_slen - slen + offset) : retval;\",\"reason\":\"The expression adds and subtracts multiple signed ints (len, new_slen, slen, offset) without bounds checks, so large values can overflow/wrap the int return value (and intermediate arithmetic) leading to incorrect results.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_218770_hard_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"offset (ssize_t) accumulation and return cast: offset+=SetPSDOffset(...); return((size_t) offset);\",\"reason\":\"The signed variable offset is repeatedly incremented in nested loops without bounds checks, so it can overflow/wrap and then be cast to size_t, yielding an incorrect large value.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_225549_hard_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function only conditionally frees a pointer and sets it to NULL, with no integer arithmetic or size calculations that could overflow or underflow.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_211110_distractor_negative",
+      "reward": 0.3,
+      "unit_pass_rate": 0.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":true,\"subtype\":\"CWE-190\",\"location\":\"free_entp->length = free_entp->next->length+1;\",\"reason\":\"The code increments a potentially untrusted/previously computed length field without any overflow check, so free_entp->next->length+1 can wrap around and corrupt subsequent length-based logic.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": true,
+        "pred_subtype": "CWE-190",
+        "binary_correct": false,
+        "valid_json": true
+      }
+    },
+    {
+      "task_id": "primevul_test_210050_distractor_negative",
+      "reward": 1.0,
+      "unit_pass_rate": 1.0,
+      "process_score": 1.0,
+      "response": "{\"vulnerable\":false,\"subtype\":\"NONE\",\"location\":\"NONE\",\"reason\":\"The function performs no arithmetic on integer types (no additions, subtractions, multiplications, or size calculations), so there is no evident integer overflow or underflow risk in this code snippet.\"}",
+      "grading_details": {
+        "gold_vulnerable": false,
+        "gold_subtype": "NONE",
+        "pred_vulnerable": false,
+        "pred_subtype": "NONE",
+        "binary_correct": true,
+        "valid_json": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "eval_category_counts": {
+    "distractor_negative": 60,
+    "hard_negative": 60,
+    "positive": 20
+  },
+  "eval_positive_subtypes": {
+    "CWE-190": 17,
+    "CWE-191": 3
+  },
+  "eval_rows": 140,
+  "train_category_counts": {
+    "distractor_negative": 219,
+    "hard_negative": 438,
+    "positive": 219
+  },
+  "train_positive_subtypes": {
+    "CWE-190": 211,
+    "CWE-191": 8
+  },
+  "train_rows": 876,
+  "train_split_counts": {
+    "train": 764,
+    "valid": 112
+  }
+}
